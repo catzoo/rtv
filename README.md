@@ -50,16 +50,16 @@ Config file can be found in the game's files in the path, (`garrysmod\data\rtv\c
 		"maps": []
 	},
 
-    {
+	{
 		"gamemode": "terrortown",
 		"prefix": [
 			"ttt_"
 		],
 		"name": "Trouble in Terrorist Town",
 		"maps": [
-            "cs_italy",
-            "cs_office"
-        ]
+            		"cs_italy",
+            		"cs_office"
+        	]
 	}
 ]
 ```
