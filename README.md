@@ -17,10 +17,10 @@ The vote is in two parts, the gamemode and the maps associated with that gamemod
 
 This addon has two commands:
 
-- `rtv`
-	- Any user can use this command to request a vote to start
-- `frtv <'start' or 'stop'>`
-	- By default, only superadmins can use this command. This is used to force the vote to start or to stop.
+| Command 	| Arguments 		| Description 	|
+| :---: 	| :---: 		| --- 		|
+| rtv		| 			| Request the vote to start. Any user can use this command by default. |
+| frtv		| <'start' or 'stop'>	| Forces the vote to start / stop. Only superadmins can use this command by default |
 
 # Requirements
 
@@ -64,31 +64,18 @@ Config file can be found in the game's files in the path, (`garrysmod\data\rtv\c
 ]
 ```
 
+| Config 	| Description 	|
+| :---: 	| --- 		|
+| name		| Name of the gamemode. This will show for users rather than the confusing name. For example, for the gamemode `terrortown` it will show the users, `Trouble in Terrorist Town`.|
+| gamemode	| This is what gamemode to switch to |
+| maps 		| List of maps to vote on. Make sure to separate the maps with a comma. |
+| prefix	| This field supports multiple prefixes (separated by a comma). For each prefix, this addon will add all maps matching that prefix. For example, in the configuration above for sandbox gamemode. The prefix is `gm_`, so this will add `gm_flatgrass` and `gm_sandbox` for maps to decide on. |
+
 **Note:** Both maps and prefix are optional fields, but one is required to give user options to vote on. Both can be entered (as shown above) and will be combined for all the choices for the user.
-
-### name
-
-- Name of the gamemode. This will show for users rather than the confusing name. For example, for the gamemode `terrortown` it will show the users, `Trouble in Terrorist Town`.
-
-### gamemode
-
-- This is what gamemode to switch to.
-
-### maps
-
-- List of maps to vote on. Make sure to separate the maps with a comma.
-
-### prefix
-
-- This field supports multiple prefixes (separated by a comma). For each prefix, this addon will add all maps matching that prefix. For example, in the configuration above for sandbox gamemode. The prefix is `gm_`, so this will add `gm_flatgrass` and `gm_sandbox` for maps to decide on.
-
 
 ## ConVars
 
-There are two convars:
-
-- `rtv_percentage` default is 0.66
-	- The percentage of total players to determine how many RTV votes is required to start a vote. For example, 0.50 would be 50% of players.
-
-- `rtv_time` default is 30
-	- How long (in seconds) a vote will last
+| Name 		| Default 	| Description 	|
+| :---: 	| :---:		| ---		|
+| rtv_percentage| 0.66		| The percentage of total players to determine how many RTV votes is required to start a vote. For example, 0.50 would be 50% of players. |
+| rtv_time	| 30		| How long (in seconds) a vote will last |
